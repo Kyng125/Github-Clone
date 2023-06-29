@@ -1,0 +1,547 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: rgb(19, 19, 24);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(28, 28, 37);
+  height: 4.5em;
+}
+
+.three-quarter-point {
+    display: none;
+}
+
+.half-point {
+  display: none;
+}
+
+@media screen and (max-width: 727px) {
+  nav {
+    display: none;
+  }
+
+  .half-point {
+    display: contents;
+  }
+
+  .half-point {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    margin-left: 1em;
+  }
+
+  .bell {
+    margin-right: 1em;
+  }
+}
+
+.github-search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.github-logo {
+  border-radius: 50%;
+  padding: 0.1em;
+  height: 4em;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 0.0001em solid grey;
+  border-radius: 0.3em;
+  margin-right: 1.5em;
+  padding: 0.3em;
+  width: 20em;
+  height: 2em;
+}
+
+.magnifying-glass {
+  margin-right: 0.5em;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.search-input::placeholder {
+  color: rgb(222, 222, 222);
+  font-size: smaller;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+}
+
+.slash {
+  margin-left: auto;
+  height: max-content;
+  background-color: transparent;
+  border: 0.0001em solid grey;
+  border-radius: 0.2em;
+  color: grey;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.search-options {
+  display: flex;
+  font-size: 0.9em;
+  gap: 1em;
+}
+
+h4 {
+  color: white;
+}
+
+.icons {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin-right: 1em;
+}
+
+.dropdown-sign {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.github-profile-icon {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.sections {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  margin-top: 3em;
+  font-size: 0.9em;
+}
+
+.open-book {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 300;
+  color: rgb(236, 229, 229);
+}
+
+.closed-book {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 300;
+  color: rgb(236, 229, 229);
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 300;
+  color: rgb(236, 229, 229);
+}
+
+.cube {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 300;
+  color: rgb(236, 229, 229);
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 300;
+  color: rgb(236, 229, 229);
+}
+
+hr {
+  margin-top: 1em;
+  opacity: 0.1;
+}
+
+.repo-owner-info {
+  display: flex;
+}
+
+.repo-owner-details {
+  margin-top: -2em;
+  margin-left: 9.5em;
+  color: white;
+  max-width: max-content;
+  margin-right: 1.1em;
+  z-index: 2;
+}
+
+.repo-owner-icon {
+  width: 18.5em;
+  border-radius: 50%;
+}
+
+.repo-owner-name {
+  margin-top: 1em;
+}
+
+.inioluwa-akinyosoye {
+  font-size: 1.5em;
+}
+
+.inisoye {
+  color: #656060;
+  font-size: 1.35em;
+  font-weight: 200;
+}
+
+.follow {
+  background-color: rgb(39, 39, 51);
+  color: white;
+  border: 0.0001em solid rgb(57, 53, 53);
+  border-radius: 0.5em;
+  width: 23em;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+}
+
+.following {
+  display: flex;
+  gap: 0.3em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.followers {
+  color: #656060;
+}
+
+span {
+  color: white;
+}
+
+.repo-owner-line {
+  opacity: 0.1;
+}
+
+.achievements {
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.achievement-badges {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.badges {
+  height: 4em;
+}
+
+.feedback {
+  color: rgb(94, 94, 253);
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-top: 1em;
+}
+
+.beta {
+  border: 0.001em solid rgb(1, 178, 1);
+  border-radius: 1em;
+  color: rgb(0, 178, 0);
+  padding: 0.2em 0.5em;
+  font-size: 1em;
+}
+
+.bor {
+  opacity: 0.5;
+  color: white;
+  margin-top: 0.5em;
+}
+
+.repo-owner-repositories {
+  margin-right: 1em;
+}
+
+.artic-badge {
+  height: 4em;
+}
+
+.input-filters {
+  display: flex;
+}
+
+.input-repository {
+  background-color: transparent;
+  color: white;
+  align-items: center;
+  border: 0.0001em solid grey;
+  border-radius: 0.3em;
+  margin-top: 1em;
+  margin-right: 1.5em;
+  padding: 0.5em;
+  width: 37.5em;
+  height: 2em;
+  opacity: 0.3;
+}
+
+.input-repository::placeholder {
+  color: white;
+  font-size: smaller;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+  opacity: 1;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  background-color: rgb(39, 39, 51);
+  color: white;
+  border: 0.0001em solid rgb(57, 53, 53);
+  border-radius: 0.5em;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+  margin-right: 0.4em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.input-filters-line {
+  margin-top: 0.5em;
+}
+
+.pon {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 0.85em;
+}
+
+.p {
+  color: white;
+  opacity: 0.2;
+}
+
+.n {
+  color: #5a5aff;
+}
+
+.footer-line {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+.footer-details {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0em;
+  font-size: 0.8em;
+  align-items: center;
+  gap: 6em;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.all-footer-links {
+  display: flex;
+  gap: 2.5em;
+}
+
+.footer-links {
+  color: #5a5aff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+      display: none;
+    }
+  
+    .three-quarter-point {
+      display: contents;
+    }
+
+    .three-quarter-point {
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .half-point {
+      display: none;
+   }
+
+   .slash {
+    background-color: white;
+    color: black;
+   }
+
+   .bell {
+    margin-right: 2em;
+  }
+
+  .sections {
+    display: flex;
+    gap: 1em;
+    margin-top: 3em;
+    font-size: 1em;
+    justify-content: flex-end;
+    margin-right: 5em;
+  }
+
+  .star {
+    display: none;
+  }
+
+  .repo-owner-details {
+    margin-left: 2em;
+  }
+
+  .input-filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .input-repository {
+    background-color: transparent;
+    color: white;
+    align-items: center;
+    border: 0.0001em solid grey;
+    border-radius: 0.3em;
+    margin-top: 1em;
+    margin-right: 1.5em;
+    padding: 0.5em;
+    width: auto;
+    height: 2em;
+    opacity: 0.3;
+  }
+
+  .footer-line {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5em;
+  }
+
+  .footer-details {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 0em;
+    font-size: 0.7em;
+    align-items: center;
+    gap: 6em;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    flex-direction: column;
+  }
+}
